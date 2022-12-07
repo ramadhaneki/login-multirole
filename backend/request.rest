@@ -1,0 +1,93 @@
+POST http://localhost:5000/users
+Content-Type: application/json
+
+{
+    "name": "Agus Syah",
+    "email": "agus@gmail.com",
+    "password": "123456",
+    "confPassword": "123456",
+    "role": "user"
+}
+
+###
+// get all user
+GET http://localhost:5000/users
+
+###
+// get single user
+GET http://localhost:5000/users/ecd01f59-0864-4eea-9903-44b663ffbe67
+
+###
+// Update user
+PATCH http://localhost:5000/users/8f05a315-21b5-4b68-9f56-02ad65736cef
+Content-Type: application/json
+
+{
+    "name": "Agus Sarif",
+    "email": "agus@gmail.com",
+    "password": "",
+    "confPassword": "",
+    "role": "user"
+}
+
+###
+// Delete User
+DELETE  http://localhost:5000/users/09fd9cd1-1a4e-4ef9-b218-4b03436ff95b
+
+###
+// Login Admin
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email": "admin@gmail.com",
+    "password": "123456"
+}
+
+###
+// Login User
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email": "agus@gmail.com",
+    "password": "123456"
+}
+
+###
+GET http://localhost:5000/me
+
+###
+DELETE http://localhost:5000/logout
+
+###
+// Get Product All
+GET http://localhost:5000/products
+
+###
+// Get Single Product
+GET http://localhost:5000/products/3c1efebe-4213-4628-8025-a4702c1a7e63
+
+###
+// Post data Product
+POST http://localhost:5000/products
+Content-Type: application/json
+
+{
+    "name": "product 6",
+    "price": 116
+}
+
+###
+//
+PATCH  http://localhost:5000/products/ea58665a-a230-48ea-9866-682506249a57
+Content-Type: application/json
+
+{
+    "name": "product Update",
+    "price": 116
+}
+
+###
+// Delete product
+DELETE  http://localhost:5000/products/3c1efebe-4213-4628-8025-a4702c1a7e63
